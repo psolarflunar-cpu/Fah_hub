@@ -1,4 +1,4 @@
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/YoshiroScripts/Wspwsp/refs/heads/main/Decode", true))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/psolarflunar-cpu/Fah_hub/refs/heads/main/Fah.lua", true))()
 
 local playerNickname = game.Players.LocalPlayer.DisplayName
 
