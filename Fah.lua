@@ -1,5 +1,3 @@
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/YoshiroScripts/Wspwsp/refs/heads/main/Decode", true))()
-
 local playerNickname = game.Players.LocalPlayer.DisplayName
 
 local window = library:AddWindow("💠 FAH | Paid Hello น้องบ่าว " .. playerNickname, {
