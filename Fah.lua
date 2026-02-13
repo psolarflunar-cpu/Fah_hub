@@ -1,4 +1,4 @@
-
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/YoshiroScripts/Wspwsp/refs/heads/main/Decode", true))()
 
 local playerNickname = game.Players.LocalPlayer.DisplayName
 
@@ -301,92 +301,4 @@ Settings:AddSwitch("🛡️ Anti AFK", function(state)
     else
         _G_AntiAFK = false
     end
-end)    if _G_AutoTierFarm then
-        task.spawn(function()
-            while _G_AutoTierFarm do
-                pcall(function()
-                    local player = game.Players.LocalPlayer
-                    local currentStrength = player.Stats["1"].Value 
-                    local hrp = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
-                    
-                    if hrp then
-
-                        
-                        for _, tier in ipairs(StrengthTiers) do
-                            if currentStrength >= tier.Threshold then
-                                hrp.CFrame = CFrame.new(tier.Pos)
-                                break
-                            end
-                        end
-                        local args = {[1] = "Train", [2] = 1}
-                        game:GetService("ReplicatedStorage"):WaitForChild("shared"):WaitForChild("Remotes"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-                    end
-                end)
-                task.wait(0.1)
-            end
-
-        end)
-    end
 end)
-
-
-local _G_AutoPunch = false
-folder1:AddSwitch("Auto Punch (หมัด)", function(bool)
-    _G_AutoPunch = bool
-    if _G_AutoPunch then
-        task.spawn(function()
-            while _G_AutoPunch do
-                pcall(function()
-                    local args = {[1] = "Train", [2] = 1}
-                    game:GetService("ReplicatedStorage"):WaitForChild("shared"):WaitForChild("Remotes"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-                end)
-                task.wait()
-            end
-        end)
-    end
-end)
-
-
-local _G_AutoShield = false
-folder1:AddSwitch("Auto Durabiility (เกราะ)", function(bool)
-    _G_AutoShield = bool
-    if _G_AutoShield then
-        task.spawn(function()
-            while _G_AutoShield do
-                pcall(function()
-                    local args = {[1] = "Train", [2] = 2}
-                    game:GetService("ReplicatedStorage"):WaitForChild("shared"):WaitForChild("Remotes"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-                end)
-                task.wait()
-            end
-        end)
-    end
-end)
-
-
-local _G_AutoChakra = false
-folder1:AddSwitch("Auto Chakra (จักระ)", function(bool)
-    _G_AutoChakra = bool
-    if _G_AutoChakra then
-        task.spawn(function()
-            while _G_AutoChakra do
-                pcall(function()
-                    local args = {[1] = "Train", [2] = 3}
-                    game:GetService("ReplicatedStorage"):WaitForChild("shared"):WaitForChild("Remotes"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
-                end)
-                task.wait()
-            end
-        end)
-    end
-end)
-
-
-local _G_AutoSword = false
-folder1:AddSwitch("Auto Sword (ดาบ)", function(bool)
-    _G_AutoSword = bool
-    if _G_AutoSword then
-        task.spawn(function()
-            while _G_AutoSword do
-                pcall(function()
-                    local args = {[1] = "Train", [2] = 4}
-                    game:GetService("ReplicatedStorage"):WaitForChild("shared"):WaitForChild("Remotes"):WaitForChild("Re
